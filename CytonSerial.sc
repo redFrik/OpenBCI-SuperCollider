@@ -7,7 +7,7 @@ CytonSerial : Cyton {
 		^super.new(dataAction, replyAction, initAction, bufferSize).initCytonSerial(port, baudrate);
 	}
 	initCytonSerial {|argPort, argBaudrate|
-		port= SerialPort(argPort ? "/dev/tty.OpenBCI-DM00DRM0", argBaudrate, crtscts:true);
+		port= SerialPort(argPort ? "/dev/tty.OpenBCI-DM00DRM0", argBaudrate);
 		CmdPeriod.add(this);
 		this.softReset;
 		task= Routine({this.prTask}).play(SystemClock);

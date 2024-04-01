@@ -7,7 +7,7 @@ GanglionSerial : Ganglion {
 		^super.new(dataAction, replyAction, initAction, bufferSize).initGanglionSerial(port, baudrate);
 	}
 	initGanglionSerial {|argPort, argBaudrate|
-		port= SerialPort(argPort ? "/dev/tty.OpenBCI-DM00DRM0", argBaudrate, crtscts:true);
+		port= SerialPort(argPort ? "/dev/tty.OpenBCI-DM00DRM0", argBaudrate);
 		CmdPeriod.add(this);
 		this.softReset;
 		task= Routine({this.prTask}).play(SystemClock);
