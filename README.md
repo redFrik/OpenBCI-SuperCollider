@@ -46,6 +46,7 @@ see https://docs.openbci.com/Troubleshooting/TroubleshootingLanding/
 
 ## changelog
 
+* 1.95 - serialport change flow control (crtscts) to false, v5 fileformat and several playback data bugfixes
 * 1.91 - add mind mirror example, minor refactor and helpfile improvements
 * 1.90 - major improvement in all examples using fft and filters
 * 1.87 - focuswidget bugfix and bandpower improvements
